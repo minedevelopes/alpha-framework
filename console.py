@@ -34,7 +34,7 @@ while True:
         if id == '' or fno == '' or username == '':
             print 'please configure the requst auth, read readme.txt for help'
         else:
-            req = urllib2.urlopen('http://[http_server_ip]/api.php?id=', id, '&fno=', fno, '&username=', username)
+            req = urllib2.urlopen('http://[http_server_ip]/api.php?id='+id+'&fno='+fno+'&username='+username)
             print req.read()
     elif cmd == '':
         temp = 0
