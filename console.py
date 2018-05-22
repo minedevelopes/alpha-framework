@@ -31,9 +31,6 @@ while True:
         print 'Setting username...'
         id = raw_input('user: ')
     elif cmd == 'run':
-        if id == '' or fno == '' or username == '':
-            print 'please configure the requst auth, type help or ?'
-        else:
             req = urllib2.urlopen('http://[http_server_ip]/api.php?id=', id, '&fno=', fno, '&username=', username)
             print req.read()
     elif cmd == '':
